@@ -139,7 +139,8 @@ body {
   background: white;
 }
 
-.btn-refresh {
+.btn-refresh,
+.btn-upload {
   background: linear-gradient(135deg, #27ae60, #2ecc71);
   color: white;
   border: none;
@@ -150,8 +151,44 @@ body {
   transition: transform 0.3s ease;
 }
 
-.btn-refresh:hover {
+.btn-upload {
+  background: linear-gradient(135deg, #e67e22, #f39c12);
+}
+
+.btn-refresh:hover,
+.btn-upload:hover {
   transform: translateY(-2px);
+}
+
+.upload-area {
+  border: 2px dashed #bdc3c7;
+  border-radius: 10px;
+  padding: 40px;
+  text-align: center;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.upload-area:hover {
+  border-color: #3498db;
+  background-color: rgba(52, 152, 219, 0.05);
+}
+
+.upload-area.dragover {
+  border-color: #2ecc71;
+  background-color: rgba(46, 204, 113, 0.1);
+}
+
+.upload-content i {
+  font-size: 3rem;
+  color: #bdc3c7;
+  margin-bottom: 15px;
+}
+
+.upload-content p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
 }
 
 .tickets-grid {
@@ -323,6 +360,23 @@ body {
   padding: 30px;
   max-height: 70vh;
   overflow-y: auto;
+}
+
+.ticket-details {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.ticket-details h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.ticket-details p {
+  margin: 8px 0;
+  color: #2c3e50;
 }
 
 .message {

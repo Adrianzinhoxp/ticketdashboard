@@ -1,21 +1,8 @@
 {
-  "name": "discord-ticket-bot",
-  "version": "1.0.0",
-  "description": "Bot de tickets para Discord - 100% puro",
-  "main": "index.js",
+  "name": "my-v0-project",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "start": "node index.js",
-    "setup": "node setup.js",
-    "dashboard": "cd dashboard && npm install && npm start",
-    "dashboard-dev": "cd dashboard && npm run dev"
-  },
-  "dependencies": {
-    "discord.js": "^14.14.1"
-  },
-  "engines": {
-    "node": ">=16.0.0"
-  },
-  "keywords": ["discord", "bot", "tickets"],
-  "author": "Você",
-  "license": "MIT"
+    "build": "echo 'no build script'"
+  }
 }
