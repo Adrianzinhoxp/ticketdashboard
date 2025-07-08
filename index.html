@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Transcripts de Tickets</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1><i class="fas fa-ticket-alt"></i> Dashboard de Tickets</h1>
+                <p>Visualize e gerencie os transcripts dos tickets</p>
+            </div>
+            <div class="stats">
+                <div class="stat-card">
+                    <i class="fas fa-file-alt"></i>
+                    <div>
+                        <span class="stat-number" id="totalTickets">0</span>
+                        <span class="stat-label">Total de Tickets</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-calendar-day"></i>
+                    <div>
+                        <span class="stat-number" id="todayTickets">0</span>
+                        <span class="stat-label">Hoje</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <span class="stat-number" id="lastUpdate">--:--</span>
+                        <span class="stat-label">Última Atualização</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="controls">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Buscar por usuário, categoria ou ID...">
+                </div>
+                <div class="filters">
+                    <select id="categoryFilter">
+                        <option value="">Todas as categorias</option>
+                        <option value="corregedoria">Corregedoria</option>
+                        <option value="up_patente">Up de Patente</option>
+                        <option value="duvidas">Dúvidas</option>
+                    </select>
+                    <button id="refreshBtn" class="btn-refresh">
+                        <i class="fas fa-sync-alt"></i> Atualizar
+                    </button>
+                </div>
+            </div>
+
+            <div class="tickets-grid" id="ticketsGrid">
+                <div class="loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Carregando transcripts...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal para visualizar transcript -->
+    <div id="transcriptModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Transcript do Ticket</h2>
+                <button class="modal-close" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Conteúdo do transcript será inserido aqui -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
